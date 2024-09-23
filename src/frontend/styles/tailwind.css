@@ -1,0 +1,94 @@
+/* Tailwind CSS imports */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+@layer base {
+  :root {
+    --color-primary: #000000;
+    --color-secondary: #FFFFFF;
+    --color-accent: #808080;
+  }
+
+  body {
+    @apply bg-white text-black font-sans;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-black text-white hover:bg-gray-800;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-black border border-black hover:bg-gray-100;
+  }
+
+  .input {
+    @apply px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black;
+  }
+
+  .card {
+    @apply bg-white border border-gray-200 rounded-lg shadow-md;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .transition-fast {
+    transition-duration: 150ms;
+  }
+
+  .transition-medium {
+    transition-duration: 300ms;
+  }
+
+  .transition-slow {
+    transition-duration: 500ms;
+  }
+}
+
+/* Responsive design */
+@screen sm {
+  /* Small screen styles */
+}
+
+@screen md {
+  /* Medium screen styles */
+}
+
+@screen lg {
+  /* Large screen styles */
+}
+
+@screen xl {
+  /* Extra large screen styles */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Accessibility */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+}
+
+/* Print styles */
+@media print {
+  /* Add any print-specific styles here */
+}
